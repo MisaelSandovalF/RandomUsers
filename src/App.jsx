@@ -5,8 +5,9 @@ import UserList from "./components/UI/UsersList";
 import ToggleCheck from "./components/UI/ToggleCheck";
 
 function App() {
-  const { loading, getData, checkcallusers } = useContext(UserContext);
+  const { loading, getData, checkcallusers, user } = useContext(UserContext);
   
+
 
   return (
     <main className="bg-[#f2f4f4] ">
@@ -16,7 +17,7 @@ function App() {
         onClick={() => getData()}
         className=" bg-[#4d5656] text-[#f8f9f9] px-2 py-1 rounded-md w-10/12 my-3  hover:bg-[#5d6d7e] active:bg-[#99a3a4]"
       >
-        Llamar a un Usuario
+        {`Llamar a ${user}`}
       </button>
 
       <ToggleCheck

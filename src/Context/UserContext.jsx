@@ -7,7 +7,7 @@ export function UserContextProvider(props) {
   const [userInfo, setUserInfo] = useState(null);
   const [loading, setLoading] = useState(true);
   const [url, setUrl] = useState("https://randomuser.me/api/");
-
+  const [user, setUser] = useState("Usuario")
   const [checkcallusers, setCheckcallusers] = useState(false);
 
   useEffect(() => {
@@ -35,7 +35,9 @@ export function UserContextProvider(props) {
         getData,
         setUrl,
         setCheckcallusers,
-        checkcallusers
+        checkcallusers,
+        user,
+        setUser,
 
       }}
     >

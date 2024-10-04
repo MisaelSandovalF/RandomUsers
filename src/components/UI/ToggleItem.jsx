@@ -4,20 +4,24 @@ import { UserContext } from "../../Context/UserContext";
 
 function ToggleItem( ) {
 
-
-    const { setUrl, checkcallusers, setCheckcallusers  } = useContext(UserContext);
-
+    
+    const { setUrl, checkcallusers, setCheckcallusers, user , setUser } = useContext(UserContext);
+    
   const change = (e) => {
     setCheckcallusers(e.target.checked);
 
     console.log(checkcallusers);
 
     if (checkcallusers) {
+      setUser("Usuario")
       setUrl("https://randomuser.me/api/");
     } else {
+      setUser("Usuarios")
       setUrl("https://randomuser.me/api/?results=5");
     }
   };
+
+
 
   return (
 

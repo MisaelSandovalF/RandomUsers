@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { UserContext } from "../../Context/UserContext";
 
 export function UserItem() {
-  const { userInfo } = useContext(UserContext);
+  const { userInfo, user } = useContext(UserContext);
   return (
     <>
-      <h1 className="text-2xl font-medium m-auto mb-3">Usuarios</h1>
+      <h1  className="text-2xl font-medium m-auto mb-3" >{user}</h1>
 
       {userInfo.length > 0 &&
         userInfo.map((data, index) => {
